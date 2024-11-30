@@ -14,8 +14,21 @@
 - create database
   
 ```
-  create database university_records;
+   create database university_records;
    use university_records
+```
+create table
+
+```
+create table FactStudent
+(
+FactID int not null primary key,
+StudentID int not null,
+FeeID int not null,
+MedicalID int not null,
+ResultID int not null,
+EnrollmentDate datetime
+)
 ```
 
 ### Financial Health of Students:
