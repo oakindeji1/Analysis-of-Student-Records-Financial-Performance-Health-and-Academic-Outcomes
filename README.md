@@ -9,8 +9,7 @@
   
 ### Possible outline:
 
-### Enrollment Dynamics:
-- Focusing on patterns in student admissions over time and by department.
+
 - create database
   
 ```
@@ -64,6 +63,20 @@ Completion_year datetime
 
 ```
 
+--Reading the tables
+
+```
+select * from [dbo].[FactStudent]
+select * from [dbo].[Feestable]
+select * from [dbo].[Medicaltable]
+select * from [dbo].[Resultstable]
+select * from [dbo].[Studenttable]
+```
+![image](https://github.com/user-attachments/assets/56ffd92e-dd32-46ed-9677-9d89957df997)
+
+### Enrollment Dynamics:
+- Focusing on patterns in student admissions over time and by department.
+  
 ### Financial Health of Students:
 - Analyze fee payment trends, outstanding balances, and financial aid implications.
 
