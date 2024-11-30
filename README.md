@@ -7,18 +7,18 @@
 - Student Health Status: Understanding the well-being of the student body.
 - Academic Performance: Assessing educational outcomes and department effectiveness.
   
-## Possible Objectives:
+### Possible outline:
 
-## Enrollment Dynamics:
+### Enrollment Dynamics:
 
-### Focus on patterns in student admissions over time and by department.
+- Focus on patterns in student admissions over time and by department.
 
-## Financial Health of Students:
-### Analyze fee payment trends, outstanding balances, and financial aid implications.
+### Financial Health of Students:
+- Analyze fee payment trends, outstanding balances, and financial aid implications.
 
-## Student Well-being:
-### Investigate health trends and their impact on academic success.
-## Academic Success Metrics:
-### GPA trends, graduation rates, and departmental performance.
-## Data-Driven Recommendations:
-### Strategies to improve enrollment, fee compliance, student support, and academic outcomes.
+### Student Well-being:
+- Investigate health trends and their impact on academic success.
+### Academic Success Metrics:
+- GPA trends, graduation rates, and departmental performance.
+### Data-Driven Recommendations:
+- Strategies to improve enrollment, fee compliance, student support, and academic outcomes.
