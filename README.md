@@ -94,6 +94,19 @@ ORDER BY EnrollmentYear;
 ```
 ![image](https://github.com/user-attachments/assets/cdf27fc5-83b5-4360-8383-42bb9f0bde01)
 
+- Geting the student that pays highest fees
+```
+SELECT fs.StudentID,ft.Totalfee, ft.PaidAmount, ft.Balance
+FROM FactStudent fs
+JOIN FeesTable ft
+ON ft.FeeID = fs.FeeID
+WHERE ft.TotalFee = (
+    SELECT MAX(TotalFee)
+    FROM FeesTable
+);
+```
+![image](https://github.com/user-attachments/assets/8ecc2555-eefa-4133-8e53-4126220423f3)
+
 
 ### Financial Health of Students:
 - Analyze fee payment trends, outstanding balances, and financial aid implications.
