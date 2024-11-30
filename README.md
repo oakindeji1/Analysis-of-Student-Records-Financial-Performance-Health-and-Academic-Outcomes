@@ -205,5 +205,22 @@ WHERE rt.GPA = (
 ```
 ![image](https://github.com/user-attachments/assets/41290c2e-2228-4bd5-873e-af2702bc0f81)
 
+- Getting the graduation rate
+```
+SELECT 
+    d.Department,
+    COUNT(fs.FactID) AS TotalStudents,
+    AVG(dr.GPA) AS AvgGPA,
+    SUM(CASE WHEN dr.Graduated = 'Yes' THEN 1 ELSE 0 END) AS Graduates,
+    ROUND(SUM(CASE WHEN dr.Graduated = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(fs.FactID),
+	2) AS GraduationRate
+FROM FactStudent fs
+JOIN Studenttable d ON fs.StudentID = d.StudentID
+JOIN Resultstable dr ON fs.ResultID = dr.ResultID
+GROUP BY d.Department
+ORDER BY AvgGPA DESC;
+```
+![image](https://github.com/user-attachments/assets/6f61558e-71d3-4dba-ba69-d8ead2f76b2b)
+
 ### Data-Driven Recommendations:
 - Strategies to improve enrollment, fee compliance, student support, and academic outcomes.
