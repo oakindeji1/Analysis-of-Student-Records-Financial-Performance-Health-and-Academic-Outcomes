@@ -10,9 +10,12 @@
 ### Possible outline:
 
 ### Enrollment Dynamics:
-
-- Focus on patterns in student admissions over time and by department.
-
+- Focusing on patterns in student admissions over time and by department.
+- create database
+  ```
+  create database university_records;
+   use university_records
+ ```
 ### Financial Health of Students:
 - Analyze fee payment trends, outstanding balances, and financial aid implications.
 
