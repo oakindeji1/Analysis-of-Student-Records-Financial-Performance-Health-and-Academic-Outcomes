@@ -17,7 +17,7 @@
    create database university_records;
    use university_records
 ```
-create table
+creating tables
 
 ```
 create table FactStudent
@@ -29,6 +29,39 @@ MedicalID int not null,
 ResultID int not null,
 EnrollmentDate datetime
 )
+
+create table StudentTable
+(
+StudentID int not null,
+Full_Name varchar(60) not null,
+DOB Datetime not null,
+Gender varchar(10) not null,
+Department varchar(30)
+)
+
+create table feestable
+(
+FeeID int not null,
+Totalfees decimal not null,
+PaidAmount decimal not null,
+paymentstatus varchar(20)
+)
+
+create table Medicaltable
+(
+MedicalID int not null,
+HealthStatus varchar not null,
+LastCheckupDate datetime
+)
+
+create table Resultstable
+(
+ResultID int not null,
+GPA int,
+Graduatestatus varchar(20),
+Completion_year datetime
+)
+
 ```
 
 ### Financial Health of Students:
