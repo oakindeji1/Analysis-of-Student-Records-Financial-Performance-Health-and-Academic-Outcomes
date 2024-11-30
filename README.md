@@ -190,6 +190,17 @@ ORDER BY AvgOutstandingBalance DESC;
 
 ### Student Well-being:
 - Investigate health trends and their impact on academic success.
+```
+SELECT 
+    dm.HealthStatus, 
+    COUNT(*) AS TotalStudents,
+    ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Medicaltable)), 2) AS Percentage
+FROM Medicaltable dm
+GROUP BY dm.HealthStatus
+ORDER BY TotalStudents DESC;
+```
+![image](https://github.com/user-attachments/assets/0557a8f3-54a0-4d5d-bd06-e10e3850ab8b)
+
 ### Academic Success Metrics:
 - GPA trends, graduation rates, and departmental performance.
 ### Data-Driven Recommendations:
