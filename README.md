@@ -76,6 +76,24 @@ select * from [dbo].[Studenttable]
 
 ### Enrollment Dynamics:
 - Focusing on patterns in student admissions over time and by department.
+
+- Getting the total number of student Enrolled
+```  
+select count(*) from FactStudent
+```
+![image](https://github.com/user-attachments/assets/d542ddfe-6488-4743-ba9e-7b921dc23e60)
+
+--Getting to know the year that has the highest enrollment
+```
+SELECT 
+    YEAR(EnrollmentDate) AS EnrollmentYear, 
+    COUNT(*) AS TotalEnrollments
+FROM FactStudent
+GROUP BY YEAR(EnrollmentDate)
+ORDER BY EnrollmentYear;
+```
+![image](https://github.com/user-attachments/assets/cdf27fc5-83b5-4360-8383-42bb9f0bde01)
+
   
 ### Financial Health of Students:
 - Analyze fee payment trends, outstanding balances, and financial aid implications.
