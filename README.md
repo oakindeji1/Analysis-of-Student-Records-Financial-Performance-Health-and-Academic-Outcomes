@@ -139,7 +139,39 @@ ORDER BY AvgGPA DESC;
 ![image](https://github.com/user-attachments/assets/983aab7f-654b-4fe4-baf3-773c4f888a05)
 
 ### Financial Health of Students:
-- Analyze fee payment trends, outstanding balances, and financial aid implications.
+- Analyze fee payment trends and outstanding balances.
+- Getting the number of Students that owes
+```
+select count(*) from [dbo].[Feestable]
+where PaymentStatus = 'Partial'
+```
+![image](https://github.com/user-attachments/assets/86a7eaf9-5905-4bce-ad94-a2966070a6ce)
+
+- Working on the fees Table using some fomulars
+```
+--Adding Balance row
+Alter table [dbo].[Feestable]
+add balance decimal(18,2) 
+
+select balance * from [dbo].[Feestable]
+select (TotalFee - PaidAmount) as balance from [dbo].[Feestable]
+select FeeID, TotalFee,PaidAmount,(TotalFee - PaidAmount) as balance from [dbo].[Feestable]
+
+update [dbo].[Feestable]
+set balance = (TotalFee - PaidAmount)
+where PaymentStatus = 'Partial'
+select * from [dbo].[Feestable]
+
+--Getting the max, Min and the Average Balance
+select max(Balance) from [dbo].[Feestable]
+select min(Balance) from [dbo].[Feestable]
+select Avg(Balance) from [dbo].[Feestable]
+
+--Getting the total Fees and Balance
+select Sum(Balance) from [dbo].[Feestable]
+select Sum(Totalfee) from [dbo].[Feestable]
+select Avg(Totalfee) from [dbo].[Feestable]
+```
 
 ### Student Well-being:
 - Investigate health trends and their impact on academic success.
