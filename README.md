@@ -16,6 +16,7 @@
   create database university_records;
    use university_records
  ```
+
 ### Financial Health of Students:
 - Analyze fee payment trends, outstanding balances, and financial aid implications.
 
