@@ -172,6 +172,21 @@ select Sum(Balance) from [dbo].[Feestable]
 select Sum(Totalfee) from [dbo].[Feestable]
 select Avg(Totalfee) from [dbo].[Feestable]
 ```
+```
+SELECT 
+    d.Department, 
+    COUNT(fs.FactID) AS TotalStudents, 
+    AVG(df.TotalFee) AS AvgTotalFee, 
+    AVG(df.Balance) AS AvgOutstandingBalance,
+    SUM(CASE WHEN df.PaymentStatus = 'Paid' THEN 1 ELSE 0 END) AS FullyPaidStudents
+FROM FactStudent fs
+JOIN Studenttable d ON fs.StudentID = d.StudentID
+JOIN Feestable df ON fs.FeeID = df.FeeID
+GROUP BY d.Department
+ORDER BY AvgOutstandingBalance DESC;
+```
+![image](https://github.com/user-attachments/assets/1b980825-903a-48b9-adc4-1aa529240b6f)
+
 
 ### Student Well-being:
 - Investigate health trends and their impact on academic success.
