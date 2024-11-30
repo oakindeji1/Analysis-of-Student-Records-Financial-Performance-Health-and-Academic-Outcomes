@@ -107,20 +107,7 @@ WHERE ft.TotalFee = (
 ```
 ![image](https://github.com/user-attachments/assets/8ecc2555-eefa-4133-8e53-4126220423f3)
 
-- Getting the student with the highest GPA
-```
-SELECT st.fullName,rt.GPA
-FROM FactStudent fs
-JOIN ResultsTable rt
-ON fs.FactID = rt.ResultID
-JOIN StudentTable st
-ON fs.FactID = st.StudentID
-WHERE rt.GPA = (
-    SELECT MAX(GPA)
-    FROM Resultstable
-);
-```
-![image](https://github.com/user-attachments/assets/41290c2e-2228-4bd5-873e-af2702bc0f81)
+
 
 - Getting the graduation rate
 ```  
@@ -203,5 +190,20 @@ ORDER BY TotalStudents DESC;
 
 ### Academic Success Metrics:
 - GPA trends, graduation rates, and departmental performance.
+- Getting the student with the highest GPA
+```
+SELECT st.fullName,rt.GPA
+FROM FactStudent fs
+JOIN ResultsTable rt
+ON fs.FactID = rt.ResultID
+JOIN StudentTable st
+ON fs.FactID = st.StudentID
+WHERE rt.GPA = (
+    SELECT MAX(GPA)
+    FROM Resultstable
+);
+```
+![image](https://github.com/user-attachments/assets/41290c2e-2228-4bd5-873e-af2702bc0f81)
+
 ### Data-Driven Recommendations:
 - Strategies to improve enrollment, fee compliance, student support, and academic outcomes.
