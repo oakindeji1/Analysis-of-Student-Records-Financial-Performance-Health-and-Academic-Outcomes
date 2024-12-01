@@ -259,8 +259,8 @@ Based on the analysis of the data:
 
 -Regarding health status:
 	
- --34.6% of students are classified as healthy.
+ 	--34.6% of students are classified as healthy.
 	
- --35.9% require follow-up medical care.
+ 	--35.9% require follow-up medical care.
 	
- --29.5% are currently undergoing treatment.
+	--29.5% are currently undergoing treatment.
