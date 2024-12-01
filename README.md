@@ -248,5 +248,8 @@ WHERE PaidPercentage < 50;
 ```
 
 
-### Data-Driven Recommendations:
-- Strategies to improve enrollment, fee compliance, student support, and academic outcomes.
+### Data-Driven Findings:
+- Based on the data. it was discovered that all the student were owning and none of the student has paid full fees.
+- Also, Egnieering Department has the highest graduant off 100 in the university
+- There are more female student than the male student
+- 34.6% of the students are Healthy, where as 35.9% requires follow up, 29.5% are under treatments
