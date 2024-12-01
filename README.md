@@ -252,9 +252,15 @@ WHERE PaidPercentage < 50;
 Based on the analysis of the data:
 
 -All students have outstanding balances, and none have fully paid their fees.
+
 -The Engineering Department has the highest number of graduates, with 100 students completing their programs.
+
 -Female students outnumber male students in the university population.
+
 -Regarding health status:
-	--34.6% of students are classified as healthy.
-	--35.9% require follow-up medical care.
-	--29.5% are currently undergoing treatment.
+	
+ --34.6% of students are classified as healthy.
+	
+ --35.9% require follow-up medical care.
+	
+ --29.5% are currently undergoing treatment.
