@@ -222,5 +222,30 @@ ORDER BY AvgGPA DESC;
 ```
 ![image](https://github.com/user-attachments/assets/6f61558e-71d3-4dba-ba69-d8ead2f76b2b)
 
+- creating views
+```
+CREATE VIEW OutstandingFees AS
+SELECT FeeID, TotalFee, PaidAmount, Balance
+FROM [dbo].[Feestable]
+WHERE
+Balance > 0;
+```
+
+```
+CREATE VIEW FeePaymentSummary AS 
+SELECT      FeeID,      TotalFee,      PaidAmount,      Balance,      ROUND((PaidAmount * 100.0 / TotalFee), 2) AS PaidPercentage,      PaymentStatus FROM FeesTable;
+```
+
+```
+select * from [dbo].[FeePaymentSummary] 
+```
+```
+SELECT FeeID, PaidPercentage FROM FeePaymentSummary 
+WHERE PaidPercentage < 50; 
+SELECT Count(FeeID) FROM FeePaymentSummary 
+WHERE PaidPercentage < 50;
+```
+
+
 ### Data-Driven Recommendations:
 - Strategies to improve enrollment, fee compliance, student support, and academic outcomes.
