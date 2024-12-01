@@ -249,7 +249,12 @@ WHERE PaidPercentage < 50;
 
 
 ### Data-Driven Findings:
-- Based on the data. it was discovered that all the student were owning and none of the student has paid full fees.
-- Also, Egnieering Department has the highest graduant off 100 in the university
-- There are more female student than the male student
-- 34.6% of the students are Healthy, where as 35.9% requires follow up, 29.5% are under treatments
+Based on the analysis of the data:
+
+-All students have outstanding balances, and none have fully paid their fees.
+-The Engineering Department has the highest number of graduates, with 100 students completing their programs.
+-Female students outnumber male students in the university population.
+-Regarding health status:
+	--34.6% of students are classified as healthy.
+	--35.9% require follow-up medical care.
+	--29.5% are currently undergoing treatment.
