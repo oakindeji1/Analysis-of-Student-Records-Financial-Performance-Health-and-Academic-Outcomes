@@ -233,7 +233,8 @@ Balance > 0;
 
 ```
 CREATE VIEW FeePaymentSummary AS 
-SELECT      FeeID,      TotalFee,      PaidAmount,      Balance,      ROUND((PaidAmount * 100.0 / TotalFee), 2) AS PaidPercentage,      PaymentStatus FROM FeesTable;
+SELECT FeeID, TotalFee, PaidAmount, Balance, ROUND((PaidAmount * 100.0 / TotalFee), 2)
+AS PaidPercentage, PaymentStatus FROM FeesTable;
 ```
 
 ```
